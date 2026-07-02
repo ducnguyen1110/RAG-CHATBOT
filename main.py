@@ -1,5 +1,5 @@
 import pypdf
-import chormadb
+import chromadb
 import ollama
 
 

@@ -6,7 +6,7 @@ from main import process_pdf, rag
 st.set_page_config(page_title="PDF RAG Chatbot", layout="wide", initial_sidebar_state="expanded")
 st.title("PDF RAG Assistant: Native Pipeline")
 
-# Khởi tạo bộ nhớ Session State theo cấu trúc mẫu y chang trong tài liệu
+# Khởi tạo bộ nhớ Session State theo cấu trúc mẫu
 for k, v in {"collection": None, "pdf_name": "", "chat_history": []}.items():
     st.session_state.setdefault(k, v)
 
@@ -14,7 +14,7 @@ for k, v in {"collection": None, "pdf_name": "", "chat_history": []}.items():
 with st.sidebar:
     st.subheader("Cấu hình mô hình")
     
-    # Cải tiến chuyên sâu: Cho phép người dùng linh động chọn LLM và Embedding ngay trên giao diện
+    # Cho phép người dùng linh động chọn LLM và Embedding ngay trên giao diện
     llm_model = st.selectbox(
         "Chọn mô hình LLM", 
         ["vicuna:7b-v1.5-q5_1", "llama3.2:latest", "qwen2.5:3b", "gemma2:9b"]
